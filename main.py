@@ -17,4 +17,8 @@ root.config(menu=main_menu)
 
 chat=Text(root,bd=1,bg='black',width=50,height=8)
 chat.place(x=6,y=6,height=305,width=370)
+
+
+message=Text(root,bg='black',width=30,height=4)
+message.place(x=128,y=400,height=88,width=260)
 root.mainloop()
