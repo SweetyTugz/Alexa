@@ -1,16 +1,20 @@
-# This is a sample Python script.
+from tkinter import *
+root=Tk()
+root.title('Chat Bot')
+root.geometry('400x500')
+main_menu=Menu(root)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+file_menu=Menu(root)
+file_menu.add_command(label='New..')
+file_menu.add_command(label='Save As..')
+file_menu.add_command(label='Exit')
+
+main_menu.add_cascade(label='False')
+main_menu.add_command(label='Edit')
+main_menu.add_command(label='Quit')
+root.config(menu=main_menu)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+chat=Text(root,bd=1,bg='black',width=50,height=8)
+chat.place(x=6,y=6,height=305,width=370)
+root.mainloop()
